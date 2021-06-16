@@ -28,6 +28,7 @@ Route::get('/empleado', function () {
 Route::get('/empleado/create',[EmpleadoController::class,'create']);
 */
 //Todas las rutas de empleado
+
 Route::resource('empleado', EmpleadoController::class)->middleware('auth');
 
 Auth::routes(['register'=>false,'reset'=>false]);

@@ -1,18 +1,25 @@
 // Mostrar lista de empleados :D //
 
 @extends('layouts.app')
-
 @section('content')
+
 <div class="container">
 
-    <br>
-    <br>
+    <div class="alert alert-success alert-dismissible" role="alert">
+        @if(Session::has('mensaje'))
 
-    @if(Session::has('mensaje'))
+        {{ Session::get('mensaje') }}
 
-    {{ Session::get('mensaje') }}
+        @endif
 
-    @endif
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+
+
+
 
     <a href="{{ url('empleado/create') }}" class="btn btn-success"> Registrar Nuevo empleado</a>
     <br>
