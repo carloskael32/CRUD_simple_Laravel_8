@@ -1,4 +1,8 @@
+
+<!--
 // formulario de edicion de empleado //
+-->
+
 @extends('layouts.app')
 
 @section('content')

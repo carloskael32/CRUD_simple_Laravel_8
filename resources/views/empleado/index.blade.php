@@ -1,22 +1,20 @@
+<!--
 // Mostrar lista de empleados :D //
-
+-->
 @extends('layouts.app')
 @section('content')
 
 <div class="container">
 
+    @if(Session::has('mensaje'))
     <div class="alert alert-success alert-dismissible" role="alert">
-        @if(Session::has('mensaje'))
-
         {{ Session::get('mensaje') }}
-
-        @endif
-
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-    </div>
 
+    </div>
+    @endif
 
 
 
@@ -70,6 +68,7 @@
         </tbody>
 
     </table>
+    {!! $empleados->links() !!}
 
-</div>
-@endsection
+    </div>
+    @endsection

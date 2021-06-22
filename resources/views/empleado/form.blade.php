@@ -1,5 +1,6 @@
+<!--
 formulario que tendra los datos en comun con create y edit
-
+-->
 <h1>{{ $modo }} Empleado</h1>
 
 @if(count($errors)>0)

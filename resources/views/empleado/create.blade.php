@@ -1,5 +1,6 @@
+<!-- 
 // formulario de creacion de empleado //
-
+-->
 @extends('layouts.app')
 
 @section('content')
